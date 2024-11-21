@@ -26,11 +26,9 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-// Property Routes
-Route::resource('properties', PropertyController::class)->names([
-    'index' => 'property.index',
-    'show' => 'property.show',
-]);
+Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
+Route::get('/properties/{property}', [PropertyController::class, 'show'])->name('properties.show');
+Route::post('/properties/contact', [PropertyController::class, 'contact'])->name('properties.contact');
 
 Route::get('/about', function () {
     return Inertia::render('About');

@@ -12,13 +12,15 @@ export default {
 
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+                heading: ['Playfair Display', ...defaultTheme.fontFamily.serif],
+                accent: ['Cormorant Garamond', ...defaultTheme.fontFamily.serif],
+            },
             colors: {
                 primary: '#1F2739',
                 secondary: '#325897',
                 accent: '#BA8C33',
-            },
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
     },
